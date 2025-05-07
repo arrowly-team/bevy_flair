@@ -750,7 +750,7 @@ impl NodeProperties {
         self.computed_values = self.empty_computed_properties.clone();
     }
 
-    pub(crate) fn has_active_animations(&self) -> bool {
+    pub fn has_active_animations(&self) -> bool {
         self.active_transitions().next().is_some() || self.active_animations().next().is_some()
     }
 
