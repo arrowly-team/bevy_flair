@@ -314,6 +314,7 @@ impl Plugin for FlairStylePlugin {
                         systems::sync_siblings_system,
                         systems::reset_properties_on_added,
                     )
+                        .chain()
                         .in_set(StyleSystemSets::Prepare),
                     (
                         systems::calculate_is_root,
